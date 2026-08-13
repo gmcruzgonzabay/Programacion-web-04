@@ -43,7 +43,7 @@ body
     padding: 1rem;
     
 }
-.navegacion-principa a:hover{
+.navegacion-principal a:hover{
 
     background-color: var(--primario);
     color: var(--oscuro);
@@ -103,10 +103,69 @@ EL H2 QUE SE ENCUENTRA EN HERO
 h2{
     color: #ffc107;
 }
-*/
+*//* ==========================
+
+   Formulario
+
+========================== */
+
+.contacto{
+    background-color: var(--secundario);
+    padding: 3rem;
+    border-radius: 2rem; 
+}
+
+.contacto h2{
+    
+    color: var(--blanco);
+    text-align: center;
+}
+.form{
+    margin: 0 auto;
+    
+}
+
+legen{
+    
+    color: var(--primario);
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+     
+}
+label
+{
+    color: var(--blanco);
+    font-weight: bold;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+input,
+textarea,
+select{
+    
+    width: 100%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+}
 
 
 
+textarea{
+height: 20rem;
+   resize: none;  
+}
+button{
+    
+    border: none;
+    cursor: pointer;
+}
 
 
 
@@ -143,7 +202,8 @@ div
 
 
 img{
-    border-radius: 30px;
+    border-radius: 30px; 
+ 
 }
 
 
