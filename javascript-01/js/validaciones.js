@@ -3,7 +3,11 @@ const nombre= document.getElementById("nombre");
 const correo= document.getElementById("correo");
 const telefono = document.getElementById("telefono");
 
-const nombreQuery= document.querySelector("#nombre")
+const nombreQuery= document.querySelector("#nombre");
+const formulario=document.querySelector(".contact-form");
+const resultado= document.querySelector("#resultado-js");
+
+
 
 
 // Evento input detecta cuando ingreso un caracter en el input
@@ -82,9 +86,39 @@ telefono.addEventListener("input", function(){
         console.log("El telefono solo debe contener numeros");
     }
 
+    if(telefono.value.length==10){
+        telefono.disabled=true;
+    }
+
 
 }
 );
+
+
+
+formulario.addEventListener("submit",function(evento){
+
+    evento.preventDefault();
+    
+    resultado.classList.remove("alert-success");
+    resultado.classList.remove("alert-danger");
+    if(nombre.value.trim() === "")
+    {
+        resultado.textContent="Debe ingresar el nombre";
+        resultado.classList.add("alert");
+        resultado.classList.add("alert-danger");
+
+        return; // Salgo de la funcion para que no siga evaluando las siguiente lineas
+    }
+
+
+
+    resultado.textContent="Formulario eviado correctamente";
+    resultado.classList.add("alert");
+    resultado.classList.add("alert-success");
+
+    console.log("se presiono enviar");
+});
 
 
 //Focus entro al campo
