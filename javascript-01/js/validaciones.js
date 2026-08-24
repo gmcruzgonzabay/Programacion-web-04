@@ -104,6 +104,8 @@ formulario.addEventListener("submit",function(evento){
     resultado.classList.remove("alert-danger");
     if(nombre.value.trim() === "")
     {
+
+        alert("Debe ingresar un nombre");
         resultado.textContent="Debe ingresar el nombre";
         resultado.classList.add("alert");
         resultado.classList.add("alert-danger");
