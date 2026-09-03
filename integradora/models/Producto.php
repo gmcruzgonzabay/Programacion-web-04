@@ -1,7 +1,8 @@
 <?php
 
     require_once __DIR__ . '/../config/database.php';
-class Producto{
+class Producto
+{
 
     private PDO $conexion;
     
@@ -16,7 +17,7 @@ class Producto{
     //CONSULTO TODOS LOS PRODUCTOS
     public function obtenerTodo():array
     {
-        $consulta= $this-> conexion->query('SLECT id,nombre,categoria,precio,stock FROM productos ORDERBY id DESC');
+        $consulta= $this-> conexion->query('SELECT id,nombre,categoria,precio,stock FROM productos');
         return $consulta->fetchAll();
 
     }
@@ -38,8 +39,6 @@ class Producto{
 
         );
     }
-
-
 
 
 }
