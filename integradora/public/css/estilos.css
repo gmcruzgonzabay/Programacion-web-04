@@ -1,0 +1,260 @@
+:root {
+    --ink: #142033;
+    --muted: #667085;
+    --green: #14865f;
+    --amber: #f0ae3d;
+    --line: #dce3ec;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 8% 0%, rgba(20, 134, 95, 0.16), transparent 30rem),
+        radial-gradient(circle at 88% 14%, rgba(240, 174, 61, 0.18), transparent 28rem),
+        linear-gradient(180deg, #f8fafc 0%, #edf1f6 100%);
+    color: var(--ink);
+}
+
+.fw-black {
+    font-weight: 900;
+    letter-spacing: 0;
+}
+
+.hero-card,
+.mvc-card,
+.metric-card,
+.app-card {
+    border: 1px solid rgba(220, 227, 236, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 22px 55px rgba(20, 32, 51, 0.09);
+}
+
+.hero-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.hero-card::after {
+    content: "";
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 8px;
+    background:
+        linear-gradient(90deg, transparent 47%, rgba(255, 255, 255, 0.9) 47% 53%, transparent 53%),
+        linear-gradient(0deg, transparent 47%, rgba(255, 255, 255, 0.9) 47% 53%, transparent 53%),
+        #e7f6ee;
+    transform: rotate(10deg);
+}
+
+.hero-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.mvc-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    background: linear-gradient(145deg, #142033, #24364e);
+    color: #fff;
+}
+
+.mvc-logo,
+.step-letter {
+    display: inline-grid;
+    place-items: center;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 900;
+}
+
+.mvc-logo {
+    width: 76px;
+    height: 76px;
+    background: linear-gradient(135deg, var(--green), var(--amber));
+}
+
+.metric-card {
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.metric-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: 1.35rem;
+}
+
+.metric-label,
+.section-label {
+    display: block;
+    color: var(--muted);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.metric-card strong {
+    color: var(--ink);
+    font-size: clamp(1.75rem, 3vw, 2.35rem);
+    line-height: 1;
+}
+
+.metric-dark {
+    border-color: transparent;
+    background: linear-gradient(145deg, #142033, #283d59);
+}
+
+.metric-dark .metric-label,
+.metric-dark strong {
+    color: #fff;
+}
+
+.app-card {
+    overflow: hidden;
+}
+
+.app-card .card-header {
+    padding: 1.35rem 1.5rem;
+    border-bottom-color: var(--line);
+}
+
+.form-label {
+    color: #344054;
+    font-size: 0.84rem;
+    font-weight: 800;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+    border-color: var(--line);
+    border-radius: 8px;
+}
+
+.input-group .form-control {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group-text {
+    background: #f8fafc;
+    color: var(--muted);
+    font-weight: 900;
+}
+
+.btn-success {
+    --bs-btn-bg: var(--green);
+    --bs-btn-border-color: var(--green);
+    --bs-btn-hover-bg: #0f6f4e;
+    --bs-btn-hover-border-color: #0f6f4e;
+    border-radius: 8px;
+    min-height: 44px;
+}
+
+.form-note {
+    border-top-color: var(--line);
+    background: #f8fafc;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.table {
+    --bs-table-hover-bg: #f8fbfa;
+}
+
+.table th {
+    color: #5f6c80;
+    font-size: 0.74rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.table td,
+.table th {
+    padding: 1rem 1.5rem;
+}
+
+.stock-progress {
+    width: 82px;
+    height: 8px;
+    flex: 0 0 82px;
+    background: #edf2f7;
+}
+
+.stock-progress .progress-bar {
+    background: var(--green);
+}
+
+.price-badge {
+    display: inline-flex;
+    min-width: 96px;
+    justify-content: center;
+    padding: 0.48rem 0.72rem;
+    border-radius: 8px;
+    background: #e7f6ee;
+    color: var(--green);
+    font-weight: 900;
+}
+
+.mvc-flow-card {
+    background: #142033;
+    color: #fff;
+}
+
+.mvc-flow-card .card-header {
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+    background: transparent;
+}
+
+.mvc-step {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.35rem 1.5rem;
+    border-color: rgba(255, 255, 255, 0.12);
+    background: transparent;
+    color: #fff;
+}
+
+.step-letter {
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.mvc-step code {
+    display: inline-block;
+    max-width: 100%;
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #bff0d6;
+    white-space: normal;
+}
+
+.mvc-step p {
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+@media (max-width: 575.98px) {
+    .hero-card::after {
+        display: none;
+    }
+
+    .table td,
+    .table th {
+        padding: 0.9rem 1rem;
+        white-space: nowrap;
+    }
+}
