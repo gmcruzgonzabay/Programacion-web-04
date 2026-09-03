@@ -2,7 +2,7 @@
 
 class Database{
 
-    private string  $host= 'localhost';
+    private string $host= 'localhost';
     private string $database='integradora';
     private string $user= 'root';
     private string $password='';
