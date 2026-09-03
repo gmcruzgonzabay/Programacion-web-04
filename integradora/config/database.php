@@ -9,7 +9,7 @@ class Database{
 
     public function conectar():PDO{
 
-        $dns= " mysql:host={$this->host};dbname={$this->database}; charset=utf8mb4" ;
+        $dns= "mysql:host={$this->host};dbname={$this->database}; charset=utf8mb4" ;
 
         return new PDO(
             $dns,$this->user, $this->password,[
